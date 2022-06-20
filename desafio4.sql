@@ -1,5 +1,5 @@
-SELECT us.name_user as usuario,
-	IF(MAX(h_play.play_date) > "2020-12-31", "Usuario ativo", "Usuario inativo") AS condicao_usuario FROM SpotifyClone.user AS us
-JOIN SpotifyClone.history_plays AS h_play ON us.id_user = h_play.id_user
-GROUP BY us.name_user
-ORDER BY us.name_user;
+SELECT US.name_user as usuario,
+	IF(MAX(HP.play_date) > "2020-12-31", "Usuario ativo", "Usuario inativo") AS condicao_usuario FROM SpotifyClone.user AS US
+JOIN SpotifyClone.history_plays AS HP ON US.id_user = HP.id_user
+GROUP BY US.name_user
+ORDER BY US.name_user;
